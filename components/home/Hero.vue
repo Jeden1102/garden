@@ -14,18 +14,7 @@
       width="600"
       class="absolute left-1/2 -translate-x-1/2 top-72 -z-10"
     />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-      <ProductCard
-        v-for="(product, index) in products"
-        :key="index"
-        :title="product.title"
-        :description="product.description"
-        :category="product.category"
-        :price="product.price"
-        :buttonText="product.buttonText"
-        :imageSrc="product.imageSrc"
-      />
-    </div>
+    <ProductCarousel :products="products" />
   </div>
 </template>
 

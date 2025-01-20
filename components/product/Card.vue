@@ -19,13 +19,7 @@
 
 <script setup lang="ts">
 import { cn } from "~/lib/utils";
+import type { Product } from "./types";
 
-const props = defineProps<{
-  title: string;
-  category?: string;
-  description?: string;
-  price?: string | number;
-  buttonText: string;
-  imageSrc: string;
-}>();
+defineProps<Product>();
 </script>
