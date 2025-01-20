@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p :class="cn('text-red-500')">test</p>
+    <AppHeader />
+    <HomeHero />
   </div>
 </template>
 <script lang="ts" setup>
