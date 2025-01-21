@@ -1,12 +1,15 @@
 <template>
   <div class="py-8 container">
-    <div class="flex flex-col gap-4 md:max-w-[700px]">
-      <h1 class="text-4xl md:text-6xl lg:text-8xl">Breath Natureal</h1>
-      <p class="text-lg font-thin lg:text-2xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <UiButton>Explore</UiButton>
+    <div class="flex flex-col gap-4 md:flex-row">
+      <div class="flex flex-col gap-4 md:max-w-[700px]">
+        <h1 class="text-4xl md:text-6xl lg:text-8xl">Breath Natureal</h1>
+        <p class="text-lg font-thin lg:text-2xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <UiButton>Explore</UiButton>
+      </div>
+      <ProductCarousel :products="products" />
     </div>
     <NuxtImg
       src="/images/hero.png"
@@ -14,7 +17,18 @@
       width="600"
       class="absolute left-1/2 -translate-x-1/2 top-72 -z-10"
     />
-    <ProductCarousel :products="products" />
+    <SectionTitle>Featured Plants</SectionTitle>
+    <ProductCard
+      v-for="product in products"
+      :key="product.title"
+      :title="product.title"
+      :description="product.description"
+      :category="product.category"
+      :price="product.price"
+      :buttonText="product.buttonText"
+      :imageSrc="product.imageSrc"
+      :horizontal="true"
+    />
   </div>
 </template>
 

@@ -5,4 +5,5 @@ export type Product = {
   price?: string | number;
   buttonText: string;
   imageSrc: string;
+  horizontal?: boolean;
 };

@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full">
+  <div class="w-full md:w-[400px] mx-auto">
     <Splide
-      :options="{ rewind: true, arrows: false }"
+      :options="{ rewind: true, arrows: false, gap: 16 }"
       aria-label="My Favorite Images"
     >
       <SplideSlide v-for="(product, index) in products" :key="index">
